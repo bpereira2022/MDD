@@ -1,0 +1,82 @@
+---
+title: "Final Code MDD Project"
+output: html_document
+date: "2024-11-05"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+Checking for outliers using OUTRIDER OUTlier 
+
+```{r}
+
+```
+
+
+Creating the deseq object & running analysis
+
+```{r cars}
+# Open Necessary Libraries
+library( "DESeq2" )
+library(ggplot2)
+library(tidyverse)
+
+# Extract your ColData and CountData. Make sure that it in your working directory.
+getwd() # get working directory
+metadata <- read.csv('ColdataFinal.csv', header = TRUE, sep = ",") #extracting coldata
+metadata$ID <- factor(metadata$ID)
+metadata$Sex <- factor(metadata$Sex)
+metadata$Treatment <- factor(metadata$Treatment)
+Count_Data <- read.csv('Count_Data_MDD.csv', header = TRUE, sep = ",") # get count data, making sure that row headers in count data match sample ID. Nevermind the X in front of count data IDs.
+
+
+# Create dds object to run analysis with appropriate model.
+dds <- DESeqDataSetFromMatrix(countData = Count_Data,
+                              colData = metadata,
+                              design = ~ ID + Treatment, tidy = TRUE)
+
+# Set your reference (control) group. 
+dds$Condition <- relevel(dds$Treatment, ref = "PRE")
+
+# Remove low counts from data before analysis
+dds <- estimateSizeFactors(dds)
+idx <- rowSums( counts(dds, normalized=TRUE) >= 5 ) >= 3
+dds <- dds[idx,]
+
+# Run analysis
+dds <- DESeq(dds)
+dds <- dds[which(mcols(dds)$betaConv),]
+
+# Extract your results using a contrast
+results_Post_vs_Pre <- results(dds, contrast = c("Treatment","POST","PRE"))
+results_Mid_vs_Pre <- results(dds, contrast = c("Treatment","MID","PRE"))
+results_75minPost_vs_Pre <- results(dds, contrast = c("Treatment","75 min POST","PRE"))
+
+# Example of how to write a file with significant results. This will save to your directory.
+resFilt <- results_Mid_vs_Pre[which(results_Mid_vs_Pre$padj < 0.10), ]
+write.csv(resFilt, file="MDD_75minPost_PRE_Contrast.csv")
+```
+
+## Plots
+
+Volcano Plot: Shows your upregulated/downregulated genes in one plot, and which onces have smaller p-values/greater fold change. 
+
+```{r pressure, echo=FALSE}
+res_volcano_plot <- lfcShrink(dds, contrast = c('Treatment','75 min POST','PRE'), results_75minPost_vs_Pre=results_75minPost_vs_Pre, type = 'normal') # prep data for plotting
+
+EnhancedVolcano(res_volcano_plot, lab = rownames(res_volcano_plot), x = 'log2FoldChange', y = 'padj', pCutoff = 0.05, FCcutoff = 0.5) # plot DEGs that meet the 0.05 cut off, and show fold changes that are higher than 0.5.
+
+plot # should show up under 'Plots'
+```
+
+PCA Plot for exploratory analysis - use this as a guide to determine which conditions would be interesting to look at. It is a PC2 vs. PC1 plot. 
+
+```{r}
+rld <- rlog(dds, blind=FALSE)
+plot <- plotPCA(rld, intgroup = "Treatment", ntop = 500, returnData = FALSE) # uses log transformed data
+```
+

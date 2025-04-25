@@ -1,0 +1,115 @@
+Sample_ID,ID,Treatment,Sex,Age,Any Antidepressent,SSRI,SNRI,NDRI,Tricyclic,SARI,Baseline PHQ-9,EX PHQ-9,DEP_BL_range,DEP_EX_range
+352_E1,352,PRE,M,26,Yes,No,Yes,No,No,No,14,7,Moderate,Mild
+352_E2,352,MID,M,26,Yes,No,Yes,No,No,No,14,7,Moderate,Mild
+352_E3,352,POST,M,26,Yes,No,Yes,No,No,No,14,7,Moderate,Mild
+352_E6,352,75 min POST,M,26,Yes,No,Yes,No,No,No,14,7,Moderate,Mild
+354_E1,354,PRE,F,29,Yes,No,No,Yes,No,No,13,4,Moderate,Minimal
+354_E2,354,MID,F,29,Yes,No,No,Yes,No,No,13,4,Moderate,Minimal
+354_E3,354,POST,F,29,Yes,No,No,Yes,No,No,13,4,Moderate,Minimal
+354_E6,354,75 min POST,F,29,Yes,No,No,Yes,No,No,13,4,Moderate,Minimal
+366_E1,366,PRE,F,31,Yes,Yes,No,No,No,No,14,13,Moderate,Moderate
+366_E2,366,MID,F,31,Yes,Yes,No,No,No,No,14,13,Moderate,Moderate
+366_E3,366,POST,F,31,Yes,Yes,No,No,No,No,14,13,Moderate,Moderate
+366_E6,366,75 min POST,F,31,Yes,Yes,No,No,No,No,14,13,Moderate,Moderate
+371_E1,371,PRE,F,21,Yes,No,No,Yes,No,No,6,6,Mild,Mild
+371_E2,371,MID,F,21,Yes,No,No,Yes,No,No,6,6,Mild,Mild
+371_E3,371,POST,F,21,Yes,No,No,Yes,No,No,6,6,Mild,Mild
+371_E6,371,75 min POST,F,21,Yes,No,No,Yes,No,No,6,6,Mild,Mild
+373_E1,373,PRE,M,25,Yes,Yes,No,No,No,No,12,9,Moderate,Mild
+373_E2,373,MID,M,25,Yes,Yes,No,No,No,No,12,9,Moderate,Mild
+373_E3,373,POST,M,25,Yes,Yes,No,No,No,No,12,9,Moderate,Mild
+373_E6,373,75 min POST,M,25,Yes,Yes,No,No,No,No,12,9,Moderate,Mild
+379_E1,379,PRE,F,21,No,No,No,No,No,No,22,17,Severe,Moderately Severe
+379_E2,379,MID,F,21,No,No,No,No,No,No,22,17,Severe,Moderately Severe
+379_E3,379,POST,F,21,No,No,No,No,No,No,22,17,Severe,Moderately Severe
+379_E6,379,75 min POST,F,21,No,No,No,No,No,No,22,17,Severe,Moderately Severe
+380_E1,380,PRE,M,36,Yes,Yes,No,Yes,No,No,14,12,Moderate,Moderate
+380_E2,380,MID,M,36,Yes,Yes,No,Yes,No,No,14,12,Moderate,Moderate
+380_E3,380,POST,M,36,Yes,Yes,No,Yes,No,No,14,12,Moderate,Moderate
+380_E6,380,75 min POST,M,36,Yes,Yes,No,Yes,No,No,14,12,Moderate,Moderate
+381_E1,381,PRE,M,30,Yes,No,Yes,No,No,No,16,14,Moderately Severe,Moderate
+381_E2,381,MID,M,30,Yes,No,Yes,No,No,No,16,14,Moderately Severe,Moderate
+381_E3,381,POST,M,30,Yes,No,Yes,No,No,No,16,14,Moderately Severe,Moderate
+381_E6,381,75 min POST,M,30,Yes,No,Yes,No,No,No,16,14,Moderately Severe,Moderate
+382_E1,382,PRE,F,24,Yes,Yes,No,No,No,No,21,20,Severe,Severe
+382_E2,382,MID,F,24,Yes,Yes,No,No,No,No,21,20,Severe,Severe
+382_E3,382,POST,F,24,Yes,Yes,No,No,No,No,21,20,Severe,Severe
+382_E6,382,75 min POST,F,24,Yes,Yes,No,No,No,No,21,20,Severe,Severe
+383_E1,383,PRE,M,24,Yes,Yes,No,Yes,No,No,16,19,Moderately Severe,Moderately Severe
+383_E2,383,MID,M,24,Yes,Yes,No,Yes,No,No,16,19,Moderately Severe,Moderately Severe
+383_E6,383,75 min POST,M,24,Yes,Yes,No,Yes,No,No,16,19,Moderately Severe,Moderately Severe
+387_E1,387,PRE,F,55,No,No,No,No,No,No,21,16,Severe,Moderately Severe
+387_E2,387,MID,F,55,No,No,No,No,No,No,21,16,Severe,Moderately Severe
+387_E3,387,POST,F,55,No,No,No,No,No,No,21,16,Severe,Moderately Severe
+387_E6,387,75 min POST,F,55,No,No,No,No,No,No,21,16,Severe,Moderately Severe
+388_E1,388,PRE,F,20,Yes,Yes,No,No,No,Yes,12,11,Moderate,Moderate
+388_E2,388,MID,F,20,Yes,Yes,No,No,No,Yes,12,11,Moderate,Moderate
+388_E3,388,POST,F,20,Yes,Yes,No,No,No,Yes,12,11,Moderate,Moderate
+388_E6,388,75 min POST,F,20,Yes,Yes,No,No,No,Yes,12,11,Moderate,Moderate
+391_E1,391,PRE,F,38,Yes,No,No,No,No,Yes,8,5,Mild,Mild
+391_E2,391,MID,F,38,Yes,No,No,No,No,Yes,8,5,Mild,Mild
+391_E3,391,POST,F,38,Yes,No,No,No,No,Yes,8,5,Mild,Mild
+391_E6,391,75 min POST,F,38,Yes,No,No,No,No,Yes,8,5,Mild,Mild
+394_E1,394,PRE,M,49,Yes,Yes,No,No,No,No,14,9,Moderate,Mild
+394_E2,394,MID,M,49,Yes,Yes,No,No,No,No,14,9,Moderate,Mild
+394_E3,394,POST,M,49,Yes,Yes,No,No,No,No,14,9,Moderate,Mild
+394_E6,394,75 min POST,M,49,Yes,Yes,No,No,No,No,14,9,Moderate,Mild
+396_E1,396,PRE,M,22,No,No,No,No,No,No,9,9,Mild,Mild
+396_E2,396,MID,M,22,No,No,No,No,No,No,9,9,Mild,Mild
+396_E3,396,POST,M,22,No,No,No,No,No,No,9,9,Mild,Mild
+396_E6,396,75 min POST,M,22,No,No,No,No,No,No,9,9,Mild,Mild
+406_E1,406,PRE,F,34,Yes,Yes,No,No,No,No,18,13,Moderately Severe,Moderate
+406_E2,406,MID,F,34,Yes,Yes,No,No,No,No,18,13,Moderately Severe,Moderate
+406_E3,406,POST,F,34,Yes,Yes,No,No,No,No,18,13,Moderately Severe,Moderate
+406_E6,406,75 min POST,F,34,Yes,Yes,No,No,No,No,18,13,Moderately Severe,Moderate
+407_E1,407,PRE,F,53,Yes,Yes,No,No,No,No,15,5,Moderately Severe,Mild
+407_E2,407,MID,F,53,Yes,Yes,No,No,No,No,15,5,Moderately Severe,Mild
+407_E3,407,POST,F,53,Yes,Yes,No,No,No,No,15,5,Moderately Severe,Mild
+407_E6,407,75 min POST,F,53,Yes,Yes,No,No,No,No,15,5,Moderately Severe,Mild
+408_E1,408,PRE,F,26,Yes,Yes,No,No,No,No,16,12,Moderately Severe,Moderate
+408_E2,408,MID,F,26,Yes,Yes,No,No,No,No,16,12,Moderately Severe,Moderate
+408_E3,408,POST,F,26,Yes,Yes,No,No,No,No,16,12,Moderately Severe,Moderate
+408_E6,408,75 min POST,F,26,Yes,Yes,No,No,No,No,16,12,Moderately Severe,Moderate
+409_E1,409,PRE,F,26,No,No,No,No,No,No,12,10,Moderate,Moderate
+409_E2,409,MID,F,26,No,No,No,No,No,No,12,10,Moderate,Moderate
+409_E3,409,POST,F,26,No,No,No,No,No,No,12,10,Moderate,Moderate
+409_E6,409,75 min POST,F,26,No,No,No,No,No,No,12,10,Moderate,Moderate
+410_E1,410,PRE,F,32,Yes,Yes,No,No,No,No,14,13,Moderate,Moderate
+410_E2,410,MID,F,32,Yes,Yes,No,No,No,No,14,13,Moderate,Moderate
+410_E3,410,POST,F,32,Yes,Yes,No,No,No,No,14,13,Moderate,Moderate
+410_E6,410,75 min POST,F,32,Yes,Yes,No,No,No,No,14,13,Moderate,Moderate
+413_E1,413,PRE,F,24,No,No,No,No,No,No,9,7,Mild,Mild
+413_E2,413,MID,F,24,No,No,No,No,No,No,9,7,Mild,Mild
+413_E3,413,POST,F,24,No,No,No,No,No,No,9,7,Mild,Mild
+413_E6,413,75 min POST,F,24,No,No,No,No,No,No,9,7,Mild,Mild
+415_E1,415,PRE,M,33,Yes,No,No,Yes,No,No,23,18,Severe,Moderately Severe
+415_E2,415,MID,M,33,Yes,No,No,Yes,No,No,23,18,Severe,Moderately Severe
+415_E3,415,POST,M,33,Yes,No,No,Yes,No,No,23,18,Severe,Moderately Severe
+415_E6,415,75 min POST,M,33,Yes,No,No,Yes,No,No,23,18,Severe,Moderately Severe
+416_E1,416,PRE,M,23,No,No,No,No,No,No,22,13,Severe,Moderate
+416_E2,416,MID,M,23,No,No,No,No,No,No,22,13,Severe,Moderate
+416_E3,416,POST,M,23,No,No,No,No,No,No,22,13,Severe,Moderate
+416_E6,416,75 min POST,M,23,No,No,No,No,No,No,22,13,Severe,Moderate
+421_E1,421,PRE,F,30,Yes,Yes,No,No,No,No,9,6,Mild,Mild
+421_E3,421,POST,F,30,Yes,Yes,No,No,No,No,9,6,Mild,Mild
+421_E6,421,75 min POST,F,30,Yes,Yes,No,No,No,No,9,6,Mild,Mild
+428_E1,428,PRE,F,30,Yes,Yes,Yes,No,No,No,13,8,Moderate,Mild
+428_E2,428,MID,F,30,Yes,Yes,Yes,No,No,No,13,8,Moderate,Mild
+429_E1,429,PRE,F,28,Yes,No,No,No,Yes,No,13,14,Moderate,Moderate
+429_E2,429,MID,F,28,Yes,No,No,No,Yes,No,13,14,Moderate,Moderate
+429_E3,429,POST,F,28,Yes,No,No,No,Yes,No,13,14,Moderate,Moderate
+429_E6,429,75 min POST,F,28,Yes,No,No,No,Yes,No,13,14,Moderate,Moderate
+437_E1,437,PRE,F,38,Yes,Yes,No,No,No,No,8,7,Mild,Mild
+437_E2,437,MID,F,38,Yes,Yes,No,No,No,No,8,7,Mild,Mild
+437_E3,437,POST,F,38,Yes,Yes,No,No,No,No,8,7,Mild,Mild
+437_E6,437,75 min POST,F,38,Yes,Yes,No,No,No,No,8,7,Mild,Mild
+438_E1,438,PRE,F,28,Yes,Yes,No,No,No,No,16,7,Moderately Severe,Mild
+438_E2,438,MID,F,28,Yes,Yes,No,No,No,No,16,7,Moderately Severe,Mild
+438_E3,438,POST,F,28,Yes,Yes,No,No,No,No,16,7,Moderately Severe,Mild
+438_E6,438,75 min POST,F,28,Yes,Yes,No,No,No,No,16,7,Moderately Severe,Mild
+442_E1,442,PRE,F,35,Yes,No,Yes,No,No,No,21,21,Severe,Severe
+442_E2,442,MID,F,35,Yes,No,Yes,No,No,No,21,21,Severe,Severe
+442_E3,442,POST,F,35,Yes,No,Yes,No,No,No,21,21,Severe,Severe
+442_E6,442,75 min POST,F,35,Yes,No,Yes,No,No,No,21,21,Severe,Severe
+445_E1,445,PRE,F,21,No,No,No,No,No,No,15,11,Moderately Severe,Moderate
+445_E2,445,MID,F,21,No,No,No,No,No,No,15,11,Moderately Severe,Moderate
