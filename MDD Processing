@@ -1,19 +1,44 @@
-# Fastqc - Lane 1
-INPUTDIR="/Users/bpereira/Desktop/MDD/Files/lane2"
-OUTPUTDIR="/Users/bpereira/Desktop/MDD/Analysis"
-HUMANMIRBASEINDEX="/Users/bpereira/Desktop/MDD/databases/miRBase"
-HUMANREFINDEX="/Users/bpereira/Desktop/MDD/databases/human-Grch38-Ref"
+INPUTDIR="/Users/bpereira/Desktop/MDD/Processing/Files"
+OUTPUTDIR="/Users/bpereira/Desktop/MDD/Processing/Analysis"
+HUMANMIRBASEINDEX="/Users/bpereira/Desktop/MDD/Processing/Analysis/Databases"
 mkdir $INPUTDIR/QCReports 
 mkdir $OUTPUTDIR/maturemiRNAcounts
-mkdir $OUTPUTDIR/genome-miRNAcounts
-rm -f Undetermined_S0_L001_R1_001.fastq.gz 
-for i in 379E3_L2 383E1_L2 383E2_L2 383E6_L2 387E1_L2 387E2_L2 387E3_L2 387E6_L2 388E1_L2 388E2_L2 388E3_L2 388E6_L2 391E1_L2
+rm -f Undetermined_file_name.fastq.gz 
+
+for gz_file in "$INPUTDIR"/*.fastq.gz
 do
-fastqc -o $INPUTDIR/QCReports $INPUTDIR/$i".fastq.gz" -t 16
-mkdir $OUTPUTDIR/$i
-bbduk.sh -Xmx27g in=$INPUTDIR/$i".fastq.gz" out=$OUTPUTDIR/$i/$i"-Trimmed.fastq" literal=TGGAATTCTCGGGTGCCAAGGAACTCCAGTCAC ktrim=r k=21 mink=11 hdist=2
-bowtie -n 0 -l 32 --norc --best --strata -m 1 --threads 16 $HUMANMIRBASEINDEX/only_human_mirna_DNA -q $OUTPUTDIR/$i/$i"-Trimmed.fastq" --un $OUTPUTDIR/$i/$i"-maturemiRNA-unalignedReads-bowtie1-beststratam1.fastq" -S $OUTPUTDIR/$i/$i"-maturemiRNA-aligned-bowtie1-beststratam1.sam" 2> $OUTPUTDIR/$i/$i"-bowtie-maturemiRNA-beststratam1.log"
-samtools sort $OUTPUTDIR/$i/$i"-maturemiRNA-aligned-bowtie1-beststratam1.sam" > $OUTPUTDIR/$i/$i"-maturemiRNA-aligned-bowtie1-beststratam1.bam"
-samtools index $OUTPUTDIR/$i/$i"-maturemiRNA-aligned-bowtie1-beststratam1.bam"
-rm -rf $OUTPUTDIR/$i/$i"-maturemiRNA-aligned-bowtie1-beststratam1.sam"
-samtools idxstats $OUTPUTDIR/$i/$i"-maturemiRNA-aligned-bowtie1-beststratam1.bam" | cut -f1,3 - | sed "1s/^/miRNA\t${i}-miRNAcount\n/" > $OUTPUTDIR/maturemiRNAcounts/$i"-maturemiRNA-counts.txt"
+  filename=$(basename "$gz_file")
+  prefix="${filename%%.fastq.gz}"
+
+  echo "🔄 Processing: $prefix"
+
+  mkdir -p "$OUTPUTDIR/$prefix"
+
+ bbduk.sh -Xmx27g \
+    in="$gz_file" \
+    out="$OUTPUTDIR/$prefix/${prefix}-Trimmed.fastq" \
+    literal=TGGAATTCTCGGGTGCCAAGGAACTCCAGTCAC \
+    ktrim=r k=21 mink=11 hdist=2
+
+bowtie -v 1 -k 1 -m 1 --best --threads 16 -S \
+    "$HUMANMIRBASEINDEX/mirbase_hsa_index" \
+    -q "$OUTPUTDIR/$prefix/${prefix}-Trimmed.fastq" \
+    --un "$OUTPUTDIR/$prefix/${prefix}-maturemiRNA-unalignedReads-bowtie1-beststratam1.fastq" \
+    -S "$OUTPUTDIR/$prefix/${prefix}-maturemiRNA-aligned-bowtie1-beststratam1.sam" \
+    2> "$OUTPUTDIR/$prefix/${prefix}-bowtie-maturemiRNA-beststratam1.log"
+
+  samtools sort "$OUTPUTDIR/$prefix/${prefix}-maturemiRNA-aligned-bowtie1-beststratam1.sam" \
+    -o "$OUTPUTDIR/$prefix/${prefix}-maturemiRNA-aligned-bowtie1-beststratam1.bam"
+
+  samtools index "$OUTPUTDIR/$prefix/${prefix}-maturemiRNA-aligned-bowtie1-beststratam1.bam"
+
+  rm -f "$OUTPUTDIR/$prefix/${prefix}-maturemiRNA-aligned-bowtie1-beststratam1.sam"
+
+  samtools idxstats "$OUTPUTDIR/$prefix/${prefix}-maturemiRNA-aligned-bowtie1-beststratam1.bam" \
+    | cut -f1,3 - \
+    | uniq -c \
+    | sort -nr \
+    | sed "1s/^/miRNA\t${prefix}-miRNAcount\n/" \
+    > "$OUTPUTDIR/maturemiRNAcounts/${prefix}-maturemiRNA-counts.txt"
+
+done
