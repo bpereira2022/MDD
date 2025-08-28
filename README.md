@@ -20,4 +20,4 @@ Final_Code_July15: R Markdown workflow for quality control, outlier detection, d
 Data Requirements:
 - Count matrix (`MDD_Final_Counts.csv`) (provided)
 - Sample metadata (`ColData_Final_Anhodenia.csv`) (provided)
-- Pathway enrichment results and gene sets for similarity analysis.
+- Pathway enrichment results and gene sets for similarity analysis (See Supplementary File with pathway enrichment results).
