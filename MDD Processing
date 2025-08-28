@@ -10,7 +10,7 @@ do
   filename=$(basename "$gz_file")
   prefix="${filename%%.fastq.gz}"
 
-  echo "🔄 Processing: $prefix"
+  echo "Processing: $prefix"
 
   mkdir -p "$OUTPUTDIR/$prefix"
 
