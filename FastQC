@@ -1,0 +1,27 @@
+# Create and activate a conda environment for FastQC and MultiQC
+
+# Create the environment and install FastQC & MultiQC
+conda create -y -n mirna_fastqc_env fastqc=0.12.1 multiqc=1.14
+conda activate mirna_fastqc_env
+
+# Set input/output directories
+RAW_DIR="path/to/raw_fastq"
+TRIM_DIR="path/to/trimmed_fastq"
+FASTQC_OUT="fastqc_reports"
+FASTQC_TRIM_OUT="fastqc_reports_trimmed"
+MULTIQC_OUT="multiqc_summary"
+
+mkdir -p "$FASTQC_OUT"
+mkdir -p "$FASTQC_TRIM_OUT"
+mkdir -p "$MULTIQC_OUT"
+
+# Run FastQC on raw reads (pre-trimming)
+fastqc "$RAW_DIR"/*.fastq* -o "$FASTQC_OUT" --threads 4
+
+# Run FastQC on trimmed reads (post-trimming)
+fastqc "$TRIM_DIR"/*.fastq* -o "$FASTQC_TRIM_OUT" --threads 4
+
+# Aggregate results with MultiQC (both pre- and post-trimming)
+multiqc "$FASTQC_OUT" "$FASTQC_TRIM_OUT" -o "$MULTIQC_OUT"
+
+echo "FastQC and MultiQC analysis complete. See $MULTIQC_OUT for summary report."
