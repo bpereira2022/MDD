@@ -1,5 +1,3 @@
-# Create and activate a conda environment for FastQC and MultiQC
-
 # Create the environment and install FastQC & MultiQC
 conda create -y -n mirna_fastqc_env fastqc=0.12.1 multiqc=1.14
 conda activate mirna_fastqc_env
