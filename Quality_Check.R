@@ -23,7 +23,7 @@ library(vsn)
 
 # Create DESeqDataSet
 
-metadata <- read.csv("ColData_Final_Anhodenia.csv")
+metadata <- read.csv("ColData_MDD.csv")
 Count_Data <- read.csv("MDD_Final_Counts.csv", row.names = 1, header = TRUE, check.names = FALSE)
 
 dds <- DESeqDataSetFromMatrix(countData = Count_Data,
