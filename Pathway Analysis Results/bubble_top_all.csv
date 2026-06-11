@@ -1,0 +1,31 @@
+Timepoint,Term,genes,FoldEnrichment,Pvalue,Category
+Mid-AAE,regulation of hippo signaling,29,2.4,0.00159,Cell Signaling
+Mid-AAE,"regulation of alternative mRNA splicing, via spliceosome",38,2.07,0.00701,RNA & Chromatin
+Mid-AAE,post-embryonic development,51,2.02,2.81e-4,Development & Growth
+Mid-AAE,mRNA stabilization,40,2,0.0108,RNA & Chromatin
+Mid-AAE,mRNA destabilization,49,1.98,9.14e-4,RNA & Chromatin
+Mid-AAE,negative regulation of mRNA catabolic process,46,1.97,0.00319,RNA & Chromatin
+Mid-AAE,regulation of mRNA stability,99,1.94,1.89e-9,RNA & Chromatin
+Mid-AAE,RNA destabilization,50,1.94,0.00175,RNA & Chromatin
+Mid-AAE,positive regulation of mRNA catabolic process,55,1.94,5.52e-4,RNA & Chromatin
+Mid-AAE,protein localization to cell junction,47,1.9,0.00783,Adhesion & Junction
+Post-AAE,axonal fasciculation,19,2.32,0.0473,Axon & Projection
+Post-AAE,neuron projection fasciculation,19,2.32,0.0473,Axon & Projection
+Post-AAE,central nervous system projection neuron axonogenesis,23,2.23,0.0174,Axon & Projection
+Post-AAE,positive regulation of dendritic spine development,30,2.05,0.0129,Dendrite & Synapse
+Post-AAE,central nervous system neuron axonogenesis,28,2.01,0.0492,Axon & Projection
+Post-AAE,regulation of filopodium assembly,33,1.97,0.0166,Dendrite & Synapse
+Post-AAE,cerebral cortex cell migration,34,1.95,0.0158,Neuronal Development
+Post-AAE,forebrain cell migration,45,1.94,5.6e-4,Neuronal Development
+Post-AAE,regulation of dendritic spine development,39,1.92,0.00496,Dendrite & Synapse
+Post-AAE,dendrite morphogenesis,43,1.92,0.00175,Dendrite & Synapse
+75 min Post-AAE,transmission of nerve impulse,16,4.3,0.00486,Synaptic Transmission
+75 min Post-AAE,modulation of chemical synaptic transmission,60,1.97,0.00502,Synaptic Transmission
+75 min Post-AAE,regulation of trans-synaptic signaling,60,1.97,0.00518,Synaptic Transmission
+75 min Post-AAE,central nervous system development,101,1.69,0.00146,Neuronal Development
+75 min Post-AAE,generation of neurons,111,1.59,0.011,Other
+75 min Post-AAE,nervous system development,209,1.58,6.68e-8,Neuronal Development
+75 min Post-AAE,neuron differentiation,104,1.58,0.0271,Neuronal Development
+75 min Post-AAE,negative regulation of RNA metabolic process,137,1.54,0.00256,RNA & Chromatin
+75 min Post-AAE,negative regulation of nucleobase-containing compound metabolic process,144,1.5,0.00682,RNA & Chromatin
+75 min Post-AAE,regulation of cell communication,305,1.44,3.51e-8,Ion Transport
