@@ -142,22 +142,38 @@ Main differential expression and figure generation pipeline. Run after QC is com
 
 ---
 
-### `Figures_6_7.R`
-Generates pathway enrichment figures and the focused miR-513a-3p panels. Run after `Master_Analysis.R` and after PANTHER pathway results are available.
+### `Figure6_7.R`
+Generates pathway enrichment figures from PANTHER results and a focused miRNA bubble plot. Run after `Master_Analysis.R` and after PANTHER pathway results are available.
 
-**Inputs:** `figure_colors.R`, `bubble_top10_all.csv` (optional), `pathway_categories.csv` (optional), `ColData_Final.csv`, `MDD_Final_Counts.csv`
+**Inputs:** `PANTHER_PATHWAY_RESULTS.xlsx` (required; one sheet per timepoint named MID, POST, 75 min POST), `figure_colors.R`, `special_miR_pathways.csv` (required for Figure 7B)
 
 **Steps and outputs:**
 
-| Figure | File | Description |
-|--------|------|-------------|
-| 6A | `Figure_6A_bubble.tiff` | Bubble plot: top 10 enriched GO terms per timepoint; size = fold enrichment, color = −log10(Bonferroni); skipped if `bubble_top10_all.csv` not found |
-| 6B | `Figure_6B_pies.tiff` | Faceted pie charts of pathway categories per timepoint; skipped if `pathway_categories.csv` not found |
-| 7A | `Figure_7A_table.tiff` / `Figure_7A_gene_table.csv` | Table of shared dendrite-morphogenesis target genes with directional regulation across timepoints; rendered as TIFF if `ggpubr` is installed |
-| 7B | `Figure_7B_513a_log2FC.tiff` | Bar chart of DESeq2 log2FC ± lfcSE for `hsa-miR-513a-3p` vs Pre-AAE at each timepoint |
-| 7C | `Figure_7C_513a_bubble.tiff` | Bubble plot: top 10 enriched GO pathways for `hsa-miR-513a-3p` targets |
+1. **Read PANTHER results** — reads all three sheets from `PANTHER_PATHWAY_RESULTS.xlsx` into a single tidy dataframe; auto-detects fold enrichment and p-value column names; prints a checkpoint summary of terms loaded per timepoint
+2. **Keyword-based categorization** — assigns each GO term to one of 11 umbrella categories using priority-ordered keyword rules (first match wins); writes full annotated table to `panther_categorized.csv`; prints a checkpoint of category counts and `Other` share per timepoint
+3. **Figure 6A** (`Figure_6A_bubble.tiff`) — bubble plot of the top 10 GO terms per timepoint by fold enrichment; size = fold enrichment, color = −log10(p-value); also writes `bubble_top_all.csv`
+4. **Figure 6B** (`Figure_6B_categories.tiff`) — stacked proportional bar chart showing umbrella-category composition of the top 20 terms per timepoint; also writes `category_counts.csv`
+5. **Figure 7B** (`pathway_enrichment_bubble.tiff` / `pathway_enrichment_bubble.pdf`) — bubble plot of enriched GO biological processes for a specific miRNA of interest; reads from `special_miR_pathways.csv` (columns: `Term`, `FoldEnrichment`, `Pvalue`)
 
-**Key packages:** `ggplot2`, `dplyr`, `tidyr`, `tibble`, `readr`, `viridis`, `DESeq2`, `ggpubr` (optional)
+**Umbrella categories used in Figure 6B:**
+
+| Category | Color |
+|----------|-------|
+| RNA & Chromatin | Blue |
+| Dendrite & Synapse | Green |
+| Axon & Projection | Sky blue |
+| Synaptic Transmission | Reddish purple |
+| Neuronal Development | Orange |
+| Learning & Behavior | Yellow |
+| Ion Transport | Grey |
+| Adhesion & Junction | Dark red |
+| Cell Signaling | Vermillion |
+| Development & Growth | Dark green |
+| General Regulation | Purple |
+
+> To adjust category assignments, edit the `categorize()` function's keyword rules. Review `panther_categorized.csv` after running to verify assignments.
+
+**Key packages:** `readxl`, `dplyr`, `tidyr`, `readr`, `ggplot2`, `viridis`, `stringr`, `scales`
 
 ---
 
@@ -168,7 +184,7 @@ Generates pathway enrichment figures and the focused miR-513a-3p panels. Run aft
 2. Quality_Check.R       # exploratory QC
 3. QC_figures.R          # publication QC panels
 4. Master_Analysis.R     # DE analysis and Figures 3–5, partial Figure 7
-5. Figures_6_7.R         # pathway and miR-513a figures (requires PANTHER outputs)
+5. Figure6_7.R           # pathway figures (requires PANTHER outputs and special_miR_pathways.csv)
 ```
 
 ---
@@ -176,6 +192,7 @@ Generates pathway enrichment figures and the focused miR-513a-3p panels. Run aft
 ## Notes
 
 - The processing script in `/MDD Processing` contains local path placeholders and should be updated for your environment before running.
-- `Figure_6A` and `Figure_6B` require PANTHER output files (`bubble_top10_all.csv`, `pathway_categories.csv`) to be present in the working directory; those are in the folder /Pathway Analysis Results.
-- `Figure_5` requires `target_sets.csv` (columns: `mid`, `post`, `min75`) exported from DIANA-microT (score ≥ 0.8); in /Target Results.
-- `Figure_7B` in `Figures_6_7.R` requires `ColData_Final.csv`.
+- `Figure6_7.R` requires `PANTHER_PATHWAY_RESULTS.xlsx` with sheets named `MID`, `POST`, and `75 min POST` in the working directory.
+- `Figure 7B` in `Figure6_7.R` requires `special_miR_pathways.csv` (columns: `Term`, `FoldEnrichment`, `Pvalue`) in the working directory.
+- `Figure_5` in `Master_Analysis.R` requires `target_sets.csv` (columns: `mid`, `post`, `min75`) exported from DIANA-microT (score ≥ 0.8); the script will skip Figure 5 with an informative message if the file is missing.
+- Review `panther_categorized.csv` after running `Figure6_7.R` to verify GO term category assignments; edit the `categorize()` keyword rules in the script if any terms are miscategorized.
