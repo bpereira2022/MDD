@@ -1,0 +1,4 @@
+pair,n_a,n_b,shared,jaccard,overlap_coef
+Mid-AAE vs Post-AAE,5336,7158,3410,0.375,0.639
+Mid-AAE vs 75 Minutes Post-AAE,5336,1144,654,0.112,0.572
+Post-AAE vs 75 Minutes Post-AAE,7158,1144,739,0.098,0.646
