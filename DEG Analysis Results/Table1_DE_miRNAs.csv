@@ -1,0 +1,169 @@
+Timepoint,miRNA,baseMean,log2FoldChange,padj
+Mid-AAE vs Pre-AAE,hsa-miR-3618,22.6,-3.01,0.0055
+Mid-AAE vs Pre-AAE,hsa-miR-1288-5p,17.8,2.44,0.027
+Mid-AAE vs Pre-AAE,hsa-miR-148a-5p,11.8,-2.92,0.027
+Mid-AAE vs Pre-AAE,hsa-miR-212-5p,18.2,-2.83,0.027
+Mid-AAE vs Pre-AAE,hsa-miR-542-3p,17.9,-2.77,0.03
+Mid-AAE vs Pre-AAE,hsa-miR-329-5p,15.6,-2.62,0.034
+Mid-AAE vs Pre-AAE,hsa-miR-380-3p,5.9,2.91,0.034
+Mid-AAE vs Pre-AAE,hsa-miR-5007-5p,81.4,-2.22,0.034
+Mid-AAE vs Pre-AAE,hsa-miR-6861-5p,101.2,-2.04,0.034
+Mid-AAE vs Pre-AAE,hsa-miR-7154-5p,17.4,-2.28,0.034
+Mid-AAE vs Pre-AAE,hsa-miR-1252-3p,44.3,-2.34,0.042
+Mid-AAE vs Pre-AAE,hsa-miR-6720-3p,14,-2.3,0.043
+Mid-AAE vs Pre-AAE,hsa-miR-137-3p,9.2,-3.19,0.047
+Mid-AAE vs Pre-AAE,hsa-miR-4496,6.8,-2.62,0.047
+Mid-AAE vs Pre-AAE,hsa-miR-6780a-3p,15.4,-2.2,0.047
+Mid-AAE vs Pre-AAE,hsa-miR-3140-3p,18.9,-2.02,0.056
+Mid-AAE vs Pre-AAE,hsa-miR-6887-5p,74.7,-1.62,0.056
+Mid-AAE vs Pre-AAE,hsa-miR-3155a,34.8,-2.09,0.062
+Mid-AAE vs Pre-AAE,hsa-miR-6783-5p,59.1,-1.88,0.063
+Mid-AAE vs Pre-AAE,hsa-miR-3182,15,2.49,0.065
+Mid-AAE vs Pre-AAE,hsa-miR-3605-3p,19.3,-1.5,0.065
+Mid-AAE vs Pre-AAE,hsa-miR-627-3p,6.3,-2.66,0.065
+Mid-AAE vs Pre-AAE,hsa-miR-1267,23.8,-2.03,0.067
+Mid-AAE vs Pre-AAE,hsa-miR-520d-5p,6.4,-2.68,0.067
+Mid-AAE vs Pre-AAE,hsa-miR-657,72,-1.6,0.07
+Mid-AAE vs Pre-AAE,hsa-miR-6499-5p,268.2,-1.19,0.074
+Mid-AAE vs Pre-AAE,hsa-miR-6814-5p,8.9,-2.18,0.074
+Mid-AAE vs Pre-AAE,hsa-miR-450a-2-3p,19.1,-2.22,0.077
+Mid-AAE vs Pre-AAE,hsa-miR-4681,31.1,1.96,0.08
+Mid-AAE vs Pre-AAE,hsa-miR-10399-5p,19.7,-2.23,0.09
+Mid-AAE vs Pre-AAE,hsa-miR-1273c,24,-2.04,0.09
+Mid-AAE vs Pre-AAE,hsa-miR-224-5p,23.6,-1.66,0.09
+Mid-AAE vs Pre-AAE,hsa-miR-4763-3p,33.6,-1.78,0.09
+Mid-AAE vs Pre-AAE,hsa-miR-4796-3p,20.8,2.15,0.091
+Mid-AAE vs Pre-AAE,hsa-miR-8080,21.4,-1.94,0.096
+Mid-AAE vs Pre-AAE,hsa-miR-3651,51,-1.37,0.098
+Mid-AAE vs Pre-AAE,hsa-miR-548az-5p,4.9,2.27,0.098
+Mid-AAE vs Pre-AAE,hsa-miR-3650,7.9,-2.25,0.099
+Mid-AAE vs Pre-AAE,hsa-miR-609,46.8,-1.7,0.099
+Mid-AAE vs Pre-AAE,hsa-miR-6845-5p,17.8,-1.75,0.099
+Mid-AAE vs Pre-AAE,hsa-miR-6744-3p,26.3,-1.81,0.1
+Post-AAE vs Pre-AAE,hsa-miR-4465,15.3,-3.15,2.2e-4
+Post-AAE vs Pre-AAE,hsa-miR-183-5p,223.9,-2.23,6.3e-4
+Post-AAE vs Pre-AAE,hsa-miR-657,72,-2.15,0.0057
+Post-AAE vs Pre-AAE,hsa-miR-4479,80.7,-1.96,0.017
+Post-AAE vs Pre-AAE,hsa-miR-21-5p,84.4,-2.14,0.021
+Post-AAE vs Pre-AAE,hsa-miR-765,57.8,-1.82,0.021
+Post-AAE vs Pre-AAE,hsa-miR-92a-1-5p,29.6,-2.36,0.021
+Post-AAE vs Pre-AAE,hsa-miR-661,21.8,-2.35,0.022
+Post-AAE vs Pre-AAE,hsa-miR-5008-5p,46.6,-2.63,0.024
+Post-AAE vs Pre-AAE,hsa-miR-6822-3p,53.3,-2.15,0.031
+Post-AAE vs Pre-AAE,hsa-miR-7855-5p,17.9,-2.08,0.031
+Post-AAE vs Pre-AAE,hsa-miR-1252-3p,44.3,-2.34,0.032
+Post-AAE vs Pre-AAE,hsa-miR-1268a,52,-1.65,0.032
+Post-AAE vs Pre-AAE,hsa-miR-130a-5p,21.3,-2.49,0.032
+Post-AAE vs Pre-AAE,hsa-miR-224-5p,23.6,-1.9,0.032
+Post-AAE vs Pre-AAE,hsa-miR-4687-3p,5811.1,-1.13,0.032
+Post-AAE vs Pre-AAE,hsa-miR-4695-5p,71.7,-1.24,0.032
+Post-AAE vs Pre-AAE,hsa-miR-4746-3p,19.6,-2.14,0.032
+Post-AAE vs Pre-AAE,hsa-miR-6127,98.7,-1.89,0.032
+Post-AAE vs Pre-AAE,hsa-miR-3682-5p,46,-2.13,0.034
+Post-AAE vs Pre-AAE,hsa-miR-4458,40.7,-2.22,0.034
+Post-AAE vs Pre-AAE,hsa-miR-7157-3p,16.1,-2.44,0.035
+Post-AAE vs Pre-AAE,hsa-miR-4446-3p,36.4,-1.99,0.037
+Post-AAE vs Pre-AAE,hsa-miR-4292,260.8,-1.59,0.038
+Post-AAE vs Pre-AAE,hsa-miR-625-3p,43.7,-2.03,0.045
+Post-AAE vs Pre-AAE,hsa-miR-6783-5p,59.1,-1.89,0.045
+Post-AAE vs Pre-AAE,hsa-miR-4523,157.2,-1.55,0.047
+Post-AAE vs Pre-AAE,hsa-miR-4804-5p,27.5,-1.77,0.047
+Post-AAE vs Pre-AAE,hsa-miR-6758-5p,24.4,-1.91,0.048
+Post-AAE vs Pre-AAE,hsa-miR-8056,25.8,-1.78,0.048
+Post-AAE vs Pre-AAE,hsa-miR-940,95.5,-1.64,0.048
+Post-AAE vs Pre-AAE,hsa-miR-1911-5p,48.3,-2.01,0.05
+Post-AAE vs Pre-AAE,hsa-miR-4685-5p,199,-1.73,0.05
+Post-AAE vs Pre-AAE,hsa-miR-4467,34.5,-1.95,0.052
+Post-AAE vs Pre-AAE,hsa-miR-1303,38,-2.01,0.054
+Post-AAE vs Pre-AAE,hsa-miR-6808-5p,103.6,-1.37,0.054
+Post-AAE vs Pre-AAE,hsa-miR-10526-3p,272.6,-0.9,0.057
+Post-AAE vs Pre-AAE,hsa-miR-3156-5p,67.2,-1.59,0.057
+Post-AAE vs Pre-AAE,hsa-miR-3196,90.8,-1.39,0.057
+Post-AAE vs Pre-AAE,hsa-miR-33b-3p,43.6,-1.73,0.057
+Post-AAE vs Pre-AAE,hsa-miR-3616-3p,44.4,-2,0.057
+Post-AAE vs Pre-AAE,hsa-miR-4769-3p,53.8,-1.66,0.057
+Post-AAE vs Pre-AAE,hsa-miR-596,27.2,-1.86,0.057
+Post-AAE vs Pre-AAE,hsa-miR-6732-5p,73.9,-1.06,0.057
+Post-AAE vs Pre-AAE,hsa-miR-6783-3p,37.3,-1.46,0.057
+Post-AAE vs Pre-AAE,hsa-miR-6831-5p,56.3,-1.16,0.057
+Post-AAE vs Pre-AAE,hsa-miR-6879-5p,34,-1.37,0.057
+Post-AAE vs Pre-AAE,hsa-miR-6887-5p,74.7,-1.49,0.057
+Post-AAE vs Pre-AAE,hsa-miR-196a-1-3p,92.9,-1.67,0.058
+Post-AAE vs Pre-AAE,hsa-miR-25-3p,49.2,-2.08,0.058
+Post-AAE vs Pre-AAE,hsa-miR-4758-3p,64.9,-1.59,0.058
+Post-AAE vs Pre-AAE,hsa-miR-4767,98.3,-1.64,0.058
+Post-AAE vs Pre-AAE,hsa-miR-6511b-5p,113.7,-1.26,0.058
+Post-AAE vs Pre-AAE,hsa-miR-652-5p,30.3,-1.78,0.058
+Post-AAE vs Pre-AAE,hsa-miR-4772-3p,23.5,-1.99,0.059
+Post-AAE vs Pre-AAE,hsa-miR-711,41.5,-1.55,0.06
+Post-AAE vs Pre-AAE,hsa-miR-6741-5p,205.3,-1.28,0.061
+Post-AAE vs Pre-AAE,hsa-miR-1295b-3p,35.3,-1.71,0.065
+Post-AAE vs Pre-AAE,hsa-miR-3928-3p,45.7,1.84,0.065
+Post-AAE vs Pre-AAE,hsa-miR-4313,104.4,-1.64,0.065
+Post-AAE vs Pre-AAE,hsa-miR-4758-5p,239.7,-1.25,0.065
+Post-AAE vs Pre-AAE,hsa-miR-6742-5p,34.3,-1.93,0.065
+Post-AAE vs Pre-AAE,hsa-miR-6769a-3p,40,-1.47,0.065
+Post-AAE vs Pre-AAE,hsa-miR-6805-5p,35.7,-1.44,0.065
+Post-AAE vs Pre-AAE,hsa-miR-1-3p,306.9,-1.99,0.066
+Post-AAE vs Pre-AAE,hsa-miR-6858-5p,103.1,-1.88,0.067
+Post-AAE vs Pre-AAE,hsa-miR-1976,23.5,-2.1,0.07
+Post-AAE vs Pre-AAE,hsa-miR-501-3p,53.1,-1.5,0.071
+Post-AAE vs Pre-AAE,hsa-miR-6802-5p,147.5,-1.36,0.081
+Post-AAE vs Pre-AAE,hsa-miR-6873-5p,21.9,-1.88,0.081
+Post-AAE vs Pre-AAE,hsa-miR-888-5p,13.5,2.67,0.081
+Post-AAE vs Pre-AAE,hsa-miR-4474-3p,26.3,-1.71,0.085
+Post-AAE vs Pre-AAE,hsa-miR-3911,32.7,-1.58,0.087
+Post-AAE vs Pre-AAE,hsa-miR-331-5p,34.9,-1.77,0.092
+Post-AAE vs Pre-AAE,hsa-miR-4787-3p,108.4,-1.23,0.092
+Post-AAE vs Pre-AAE,hsa-miR-4488,79.3,-1.3,0.093
+Post-AAE vs Pre-AAE,hsa-miR-6499-5p,268.2,-1.04,0.093
+Post-AAE vs Pre-AAE,hsa-miR-6715b-5p,21,-1.98,0.093
+Post-AAE vs Pre-AAE,hsa-miR-2114-5p,82.8,-1.26,0.095
+Post-AAE vs Pre-AAE,hsa-miR-4726-3p,68.6,-1.44,0.095
+Post-AAE vs Pre-AAE,hsa-miR-6889-5p,94.4,-1.13,0.095
+Post-AAE vs Pre-AAE,hsa-miR-933,18,-1.36,0.095
+Post-AAE vs Pre-AAE,hsa-miR-6885-5p,52.9,-1.41,0.096
+Post-AAE vs Pre-AAE,hsa-miR-2861,637.8,-1.08,0.099
+Post-AAE vs Pre-AAE,hsa-miR-3618,22.6,-1.8,0.099
+Post-AAE vs Pre-AAE,hsa-miR-3651,51,-1.23,0.099
+Post-AAE vs Pre-AAE,hsa-miR-3944-3p,62.4,-1.4,0.099
+Post-AAE vs Pre-AAE,hsa-miR-4256,17.1,-1.67,0.099
+Post-AAE vs Pre-AAE,hsa-miR-4283,137,-1.4,0.099
+Post-AAE vs Pre-AAE,hsa-miR-4447,88.8,-1.41,0.099
+Post-AAE vs Pre-AAE,hsa-miR-520d-3p,15.6,-1.95,0.099
+Post-AAE vs Pre-AAE,hsa-miR-5586-5p,16.5,-2.09,0.099
+Post-AAE vs Pre-AAE,hsa-miR-5693,49.9,-1.58,0.099
+Post-AAE vs Pre-AAE,hsa-miR-642b-3p,33.7,-1.59,0.099
+Post-AAE vs Pre-AAE,hsa-miR-6511a-5p,115.8,-1.08,0.099
+Post-AAE vs Pre-AAE,hsa-miR-6752-5p,83.9,-1.2,0.099
+Post-AAE vs Pre-AAE,hsa-miR-6773-5p,36.5,-1.87,0.099
+75 min Post-AAE vs Pre-AAE,hsa-miR-217-3p,6.4,3.52,0.034
+75 min Post-AAE vs Pre-AAE,hsa-miR-3682-3p,17.1,2.74,0.034
+75 min Post-AAE vs Pre-AAE,hsa-miR-649,18.1,2.59,0.034
+75 min Post-AAE vs Pre-AAE,hsa-miR-7851-3p,22.2,2.31,0.034
+75 min Post-AAE vs Pre-AAE,hsa-miR-1246,71.3,2.09,0.054
+75 min Post-AAE vs Pre-AAE,hsa-miR-143-3p,720.1,1.71,0.054
+75 min Post-AAE vs Pre-AAE,hsa-miR-148b-3p,60.1,1.86,0.054
+75 min Post-AAE vs Pre-AAE,hsa-miR-196b-3p,44.6,2.45,0.054
+75 min Post-AAE vs Pre-AAE,hsa-miR-3675-5p,38.9,-1.16,0.054
+75 min Post-AAE vs Pre-AAE,hsa-miR-3917,15.7,2.5,0.054
+75 min Post-AAE vs Pre-AAE,hsa-miR-3921,18.3,2.56,0.054
+75 min Post-AAE vs Pre-AAE,hsa-miR-4423-3p,30.9,2.23,0.054
+75 min Post-AAE vs Pre-AAE,hsa-miR-4772-3p,23.5,-2.44,0.054
+75 min Post-AAE vs Pre-AAE,hsa-miR-5579-3p,182.8,2.36,0.054
+75 min Post-AAE vs Pre-AAE,hsa-miR-6850-3p,105.3,1.85,0.054
+75 min Post-AAE vs Pre-AAE,hsa-miR-579-3p,7.6,2.05,0.06
+75 min Post-AAE vs Pre-AAE,hsa-miR-7158-3p,31,-1.87,0.06
+75 min Post-AAE vs Pre-AAE,hsa-miR-1252-3p,44.3,-2.2,0.071
+75 min Post-AAE vs Pre-AAE,hsa-miR-1273h-3p,22.3,2.36,0.071
+75 min Post-AAE vs Pre-AAE,hsa-miR-3683,11.7,2.47,0.071
+75 min Post-AAE vs Pre-AAE,hsa-miR-4433b-3p,90.4,2,0.071
+75 min Post-AAE vs Pre-AAE,hsa-miR-512-5p,20.6,2,0.071
+75 min Post-AAE vs Pre-AAE,hsa-miR-126-3p,56.5,2.17,0.076
+75 min Post-AAE vs Pre-AAE,hsa-miR-23b-3p,17.9,2.69,0.076
+75 min Post-AAE vs Pre-AAE,hsa-miR-655-3p,10,2.74,0.076
+75 min Post-AAE vs Pre-AAE,hsa-miR-5701,2.5,2.38,0.077
+75 min Post-AAE vs Pre-AAE,hsa-miR-30e-5p,21.7,2.15,0.079
+75 min Post-AAE vs Pre-AAE,hsa-let-7c-3p,10.3,2.61,0.097
+75 min Post-AAE vs Pre-AAE,hsa-miR-520d-5p,6.4,-2.59,0.097
+75 min Post-AAE vs Pre-AAE,hsa-miR-575,6.2,2.4,0.097
