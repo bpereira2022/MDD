@@ -53,4 +53,4 @@ This repository contains the processing and analysis outputs for extracellular v
 ## Notes
 
 - The processing script in `/MDD Processing` contains local path placeholders and should be updated for your environment before running.
-- The R workflow currently references `ColData_Final_Anhodenia.csv`; update this filename/path to your available metadata file if needed.
+- The R workflow currently references `ColData_Final_Anhodenia.csv` (spelled this way in the script); update this filename/path to your available metadata file if needed.
