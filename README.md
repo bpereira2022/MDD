@@ -107,6 +107,30 @@ Produces publication-ready PNG panels from the QC analysis. Outputs 6 files to t
 
 ---
 
+### `hemolysis_platelet_QC.R`
+Post-hoc QC workflow for hemolysis and platelet contamination signals using normalized counts from the DESeq2 object.
+
+**Inputs:** `ddsClean` object from the main DE pipeline (`Master_Analysis.R`)
+
+**Output files (saved to `/results`):**
+
+| File | Description |
+|------|-------------|
+| `Supplementary_Figure2_Hemolysis_QC.tiff` / `.pdf` | Hemolysis index boxplot + PCA colored by hemolysis index |
+| `Supplementary_Table_HemolysisIndex.csv` | Per-sample hemolysis index values |
+| `Supplementary_Table_PlateletMiRNA_FriedmanTests.csv` | Per-miRNA Friedman test results for platelet-enriched miRNAs |
+| `Supplementary_Figure3_Platelet_QC.tiff` / `.pdf` | Faceted platelet-enriched miRNA expression boxplots across timepoints |
+
+**Key checks:**
+1. Computes hemolysis index from canonical numerator/denominator miRNAs and tests timepoint effects with a Friedman test
+2. Flags hemolysis-threshold context in visualization (`log2(7)` reference line)
+3. Evaluates platelet-enriched miRNAs across timepoints with per-miRNA Friedman tests (BH-adjusted p-values)
+4. Highlights platelet miRNAs that are also DE in the main study results
+
+**Key packages:** `DESeq2`, `ggplot2`, `dplyr`, `tidyr`, `tibble`, `patchwork`
+
+---
+
 ### `Master_Analysis.R`
 Main differential expression and figure generation pipeline. Run after QC is complete.
 
@@ -184,7 +208,8 @@ Generates pathway enrichment figures from PANTHER results and a focused miRNA bu
 2. Quality_Check.R       # exploratory QC
 3. QC_figures.R          # publication QC panels
 4. Master_Analysis.R     # DE analysis and Figures 3–5, partial Figure 7
-5. Figure6_7.R           # pathway figures (requires PANTHER outputs and special_miR_pathways.csv)
+5. hemolysis_platelet_QC.R  # post-hoc hemolysis and platelet contamination QC (after ddsClean is available)
+6. Figure6_7.R           # pathway figures (requires PANTHER outputs and special_miR_pathways.csv)
 ```
 
 ---
