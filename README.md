@@ -13,7 +13,7 @@ This repository contains the processing and analysis outputs for extracellular v
   3. Count generation from aligned reads (`samtools`)
 
 - `/FastQC`
-  Raw and trimmed read quality-control reports (`fastqc`, `multiqc`).
+  FastQC/MultiQC workflow script for generating raw and trimmed read quality-control reports.
 
 - `/DEG Analysis Results`
   Differential expression outputs by timepoint:
@@ -22,7 +22,6 @@ This repository contains the processing and analysis outputs for extracellular v
   - `DE_75min.csv`
   - `Table1_DE_miRNAs.csv`
   - `expressed_miRNAs.txt`
-  - `Shared_DEGs_table.csv`
 
 - `/Pathway Analysis Results`
   Pathway enrichment summaries and plots:
@@ -158,46 +157,11 @@ Main differential expression and figure generation pipeline. Run after QC is com
 7. **Per-subject paired log2FC matrix** — computed from normalized counts, used by Figures 4A and 4B
 8. **Figure 4A** (`Figure_4A_Heatmap_all.tiff`) — heatmap of all significantly DE miRNAs; rows annotated by DEG pattern (which timepoints), columns by timepoint
 9. **Figure 4B** (`Figure_4B_Heatmap_shared.tiff`) — heatmap of miRNAs trending (FDR < 0.10) in ≥2 timepoints; rows ordered by mean log2FC
-10. **Figure 4C** (`Figure_4C_Venn_DE.tiff`) — Venn diagram of trending DE miRNAs across the three contrasts; `Shared_DEGs_table.csv` written with per-timepoint log2FC and FDR
+10. **Figure 4C** (`Figure_4C_Venn_DE.tiff`) — Venn diagram of trending DE miRNAs across the three contrasts; script also exports a per-timepoint overlap summary table
 11. **Figure 5** (`Figure_5A_Venn_targets.tiff`, `Figure_5B_Jaccard.tiff`) — target gene overlap Venn and Jaccard similarity heatmap; skipped if `target_sets.csv` is not present
 12. **Figure 7 (partial)** — normalized count boxplot for `hsa-miR-1252-3p` across all timepoints; saved as PDF and TIFF
 
 **Key packages:** `DESeq2`, `ggplot2`, `dplyr`, `tidyr`, `tibble`, `ggrepel`, `pheatmap`, `RColorBrewer`, `EnhancedVolcano`, `VennDiagram`, `viridis`
-
----
-
-### `Figure6_7.R`
-Generates pathway enrichment figures from PANTHER results and a focused miRNA bubble plot. Run after `Master_Analysis.R` and after PANTHER pathway results are available.
-
-**Inputs:** `PANTHER_PATHWAY_RESULTS.xlsx` (required; one sheet per timepoint named MID, POST, 75 min POST), `figure_colors.R`, `special_miR_pathways.csv` (required for Figure 7B)
-
-**Steps and outputs:**
-
-1. **Read PANTHER results** — reads all three sheets from `PANTHER_PATHWAY_RESULTS.xlsx` into a single tidy dataframe; auto-detects fold enrichment and p-value column names; prints a checkpoint summary of terms loaded per timepoint
-2. **Keyword-based categorization** — assigns each GO term to one of 11 umbrella categories using priority-ordered keyword rules (first match wins); writes full annotated table to `panther_categorized.csv`; prints a checkpoint of category counts and `Other` share per timepoint
-3. **Figure 6A** (`Figure_6A_bubble.tiff`) — bubble plot of the top 10 GO terms per timepoint by fold enrichment; size = fold enrichment, color = −log10(p-value); also writes `bubble_top_all.csv`
-4. **Figure 6B** (`Figure_6B_categories.tiff`) — stacked proportional bar chart showing umbrella-category composition of the top 20 terms per timepoint; also writes `category_counts.csv`
-5. **Figure 7B** (`pathway_enrichment_bubble.tiff` / `pathway_enrichment_bubble.pdf`) — bubble plot of enriched GO biological processes for a specific miRNA of interest; reads from `special_miR_pathways.csv` (columns: `Term`, `FoldEnrichment`, `Pvalue`)
-
-**Umbrella categories used in Figure 6B:**
-
-| Category | Color |
-|----------|-------|
-| RNA & Chromatin | Blue |
-| Dendrite & Synapse | Green |
-| Axon & Projection | Sky blue |
-| Synaptic Transmission | Reddish purple |
-| Neuronal Development | Orange |
-| Learning & Behavior | Yellow |
-| Ion Transport | Grey |
-| Adhesion & Junction | Dark red |
-| Cell Signaling | Vermillion |
-| Development & Growth | Dark green |
-| General Regulation | Purple |
-
-> To adjust category assignments, edit the `categorize()` function's keyword rules. Review `panther_categorized.csv` after running to verify assignments.
-
-**Key packages:** `readxl`, `dplyr`, `tidyr`, `readr`, `ggplot2`, `viridis`, `stringr`, `scales`
 
 ---
 
@@ -209,7 +173,6 @@ Generates pathway enrichment figures from PANTHER results and a focused miRNA bu
 3. QC_figures.R          # publication QC panels
 4. Master_Analysis.R     # DE analysis and Figures 3–5, partial Figure 7
 5. hemolysis_platelet_QC.R  # post-hoc hemolysis and platelet contamination QC (after ddsClean is available)
-6. Figure6_7.R           # pathway figures (requires PANTHER outputs and special_miR_pathways.csv)
 ```
 
 ---
@@ -217,7 +180,4 @@ Generates pathway enrichment figures from PANTHER results and a focused miRNA bu
 ## Notes
 
 - The processing script in `/MDD Processing` contains local path placeholders and should be updated for your environment before running.
-- `Figure6_7.R` requires `PANTHER_PATHWAY_RESULTS.xlsx` with sheets named `MID`, `POST`, and `75 min POST` in the working directory.
-- `Figure 7B` in `Figure6_7.R` requires `special_miR_pathways.csv` (columns: `Term`, `FoldEnrichment`, `Pvalue`) in the working directory.
 - `Figure_5` in `Master_Analysis.R` requires `target_sets.csv` (columns: `mid`, `post`, `min75`) exported from DIANA-microT (score ≥ 0.8); the script will skip Figure 5 with an informative message if the file is missing.
-- Review `panther_categorized.csv` after running `Figure6_7.R` to verify GO term category assignments; edit the `categorize()` keyword rules in the script if any terms are miscategorized.
