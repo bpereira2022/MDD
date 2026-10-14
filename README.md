@@ -181,3 +181,11 @@ Main differential expression and figure generation pipeline. Run after QC is com
 
 - The processing script in `/MDD Processing` contains local path placeholders and should be updated for your environment before running.
 - `Figure_5` in `Master_Analysis.R` requires `target_sets.csv` (columns: `mid`, `post`, `min75`) exported from DIANA-microT (score ≥ 0.8); the script will skip Figure 5 with an informative message if the file is missing.
+
+## Citation and contact
+
+If you use this code or data, please cite the associated manuscript:
+
+> Elliott BB, Vishnu Prasad V, Taylor A, Shofner IJ, Kerns K, Meyer J and McNeill EM (2026) Acute aerobic exercise is associated with a biphasic, temporally ordered shift in serum extracellular vesicle microRNA expression in major depressive disorder. Front. Mol. Biosci. 13:1910088. doi: 10.3389/fmolb.2026.1910088
+
+**Contact:** Beatriz B. Elliott, GitHub: [@bpereira2022](https://github.com/bpereira2022)
